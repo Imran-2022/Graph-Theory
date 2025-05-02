@@ -1,0 +1,48 @@
+Non-linear Data structure . (V,E)
+
+= Terminology
+= Representation
+= Traversal
+= Graph ALgorithm
+
+Graph : collection of nodes and edges , connection between them. 
+
+depending on direction:
+
+1. directed (one way road)
+2. undirected 
+
+Edge(weight)
+
+1. weighted 
+2. unweighted
+
+special graph Tree. Connected component and no cycle. Number of edges = number of nodes -1 . | E | = | V | - 1 
+
+Representation Type : 
+
+i. adjacency matrix
+ii. adjacency list
+iii. list of edges
+
+Graph Traversal : 
+
+1. BFS (Breadth First Search)
+
+Level by level.
+
+Uses queue.
+
+Good for shortest path in unweighted graphs.
+
+Applications: Level-order traversal, shortest path, peer-to-peer networking.
+
+
+
+2. DFS (Depth First Search)
+
+Go deep before backtracking.
+
+Uses stack (or recursion).
+
+Applications: Cycle detection, topological sort, connected components.

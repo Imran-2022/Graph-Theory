@@ -27,6 +27,7 @@ void dijkstra(int source){
             int w=vpair.second;
             if(visited[v])continue;
             if(cost[v]>cost[u]+w){
+            //It greedily updates the shortest path cost to every node and ensures the lowest-cost path is always chosen.
                 cost[v]=cost[u]+w;
                 pq.push({cost[v],v});
                 parent[v]=u;

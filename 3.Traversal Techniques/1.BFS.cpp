@@ -13,6 +13,8 @@ int level[N];
 // Adjacency Matrix:
 // Must check all V nodes → O(V) time, even if few are connected.
 
+// Mark nodes as visited when you push them into the queue, not when you pop them
+
 void bfs(int s){
     queue<int>q;
     q.push(s);

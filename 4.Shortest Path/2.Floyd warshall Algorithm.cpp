@@ -5,7 +5,7 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-const int INF=1e7;
+const int INF = 1e7;
 int main()
 {
     int n, e;
@@ -29,7 +29,6 @@ int main()
         dis[a][b] = w;
     }
 
-
     // for (int i = 1; i <= n; i++)
     // {
     //     for (int j = 1; j <= n; j++)
@@ -40,23 +39,28 @@ int main()
     //     cout << endl;
     // }
 
-
-    for(int k=1;k<=n;k++){
-        for(int i=1;i<=n;i++){
-            for(int j=1;j<=n;j++){
-                if( dis[i][k]+dis[k][j]<dis[i][j]){
-                    dis[i][j]=dis[i][k]+dis[k][j];
+    for (int k = 1; k <= n; k++)
+    {
+        for (int i = 1; i <= n; i++)
+        {
+            for (int j = 1; j <= n; j++)
+            {
+                if (dis[i][k] + dis[k][j] < dis[i][j])
+                {
+                    dis[i][j] = dis[i][k] + dis[k][j];
                 }
             }
         }
     }
 
- for (int i = 1; i <= n; i++)
+    for (int i = 1; i <= n; i++)
     {
         for (int j = 1; j <= n; j++)
         {
-            if(dis[i][j]==INF)cout<<"INF"<<" ";
-            else cout << dis[i][j] << " ";
+            if (dis[i][j] == INF)
+                cout << "INF" << " ";
+            else
+                cout << dis[i][j] << " ";
         }
         cout << endl;
     }
@@ -65,7 +69,7 @@ int main()
 }
 
 /*
-input :- 
+input :-
 
 4 6
 1 2 3
@@ -75,14 +79,14 @@ input :-
 3 2 1
 2 4 4
 
-output :- 
+output :-
 
-0   3   INF   5   
-2   0   INF   4   
-INF   1   0   INF   
-INF   INF   2   0   
+0   3   INF   5
+2   0   INF   4
+INF   1   0   INF
+INF   INF   2   0
 
-input 
+input
 4 6
 1 2 3
 2 1 2
@@ -93,10 +97,10 @@ input
 
 output
 
-0 3 7 5 
-2 0 6 4 
-3 1 0 5 
-5 3 2 0 
+0 3 7 5
+2 0 6 4
+3 1 0 5
+5 3 2 0
 
 
 input :-
@@ -105,11 +109,11 @@ input :-
 2 3 2
 3 1 -5
 
-output :- 
+output :-
 
--4 -5 -3 
--3 -4 -2 
--9 -10 -8 
+-4 -5 -3
+-3 -4 -2
+-9 -10 -8
 
 
 if(diagonal change , that's means negative cycle.)
